@@ -1,9 +1,10 @@
 import discord
 from discord.ext import commands, tasks
 from mcstatus import JavaServer
+import os
 
 # ------------- CONFIG -------------
-TOKEN = "MTQxMDgxODI0MDk1ODk1OTY0Mg.GZE5ul.m-dCWUweX4qg0KcWvNBAn64_fYCeLIJHabbLko"
+TOKEN = os.getenv("BOT_TOKEN")
 UPDATE_INTERVAL = 60  # seconds between status updates
 # ---------------------------------
 
@@ -68,3 +69,4 @@ async def status(ctx):
 # ---------------------------
 
 bot.run(TOKEN)
+
